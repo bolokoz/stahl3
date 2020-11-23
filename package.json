@@ -7,7 +7,7 @@
     "name": "yuri vfbckr",
     "email": "yurifbeck@gmail.com"
   },
-  "repository": "stahl3/stahl und holz",
+  "repository": "stahl3/stahlundholz",
   "scripts": {
     "dev": "vuepress dev docs",
     "build": "vuepress build docs"
