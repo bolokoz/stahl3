@@ -5,11 +5,11 @@ tagline:
 actionText: Quick Start →
 actionLink: /analise_estrutural/
 features:
-- title: Feature 1 Title
+- title: Análise Estrutural
   details: Feature 1 Description
-- title: Feature 2 Title
+- title: Estruturas de Madeira
   details: Feature 2 Description
-- title: Feature 3 Title
+- title: Estruturas Metálicas
   details: Feature 3 Description
 footer: Made by yuri vfbckr with ❤️
 ---
