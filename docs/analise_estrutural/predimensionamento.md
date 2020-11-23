@@ -1,9 +1,3 @@
----
-sidebar: auto
-sidebarDepth: 2
-
----
-
 # Pré-dimensionamento 
 
 ### Pilares
@@ -35,6 +29,7 @@ Preferir uma estaca maior do que duas menores, pois assim cria-se uma mini viga 
 - Maciça duas direções sem viga -> 4% do maior vão
 - Maciça duas direções com viga -> 3% do maior vão
 
+##
 
 ## Passos
 
