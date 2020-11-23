@@ -34,8 +34,8 @@ module.exports = {
     lastUpdated: true,
     nav: [
       {
-        text: 'Análise',
-        link: '/analise/',
+        text: 'Análise estrutural',
+        link: '/analise_estrutural/',
       },
       {
         text: 'Metálicas',
