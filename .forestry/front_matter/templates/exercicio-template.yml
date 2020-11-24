@@ -37,3 +37,5 @@ fields:
     min: 
     max: 
   description: Bloco de respota, como funcioan isso
+pages:
+- docs/madeiras/exercicios/mad002.md
