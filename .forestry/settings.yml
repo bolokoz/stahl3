@@ -5,6 +5,13 @@ admin_path: docs/.vuepress/admin
 webhook_url: 
 sections:
 - type: directory
+  path: docs/metalicas
+  label: metlicas
+  create: all
+  match: "**/*"
+  templates:
+  - exercicio
+- type: directory
   path: docs/madeiras/exercicios
   label: exercicios
   create: documents
