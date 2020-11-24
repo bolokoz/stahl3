@@ -60,7 +60,7 @@ module.exports = {
       {
         target: 'svg',
         macros: {
-          '*': '\\times',
+          ' * ': '\\times',
         },
       },
     ],
