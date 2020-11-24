@@ -1,4 +1,39 @@
 ---
 label: exercicio template
 hide_body: false
-fields: []
+fields:
+- name: titulo
+  type: text
+  config:
+    required: false
+  label: Título
+  description: 'Titulo do exercício: Madeiras 001'
+- name: questao
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: Questão
+  description: 'Colar a questão aqui '
+- name: imagem_questao
+  type: file
+  config:
+    maxSize: 64
+  label: Imagem questao
+  description: Colocar imagem da questao
+- name: tags
+  type: tag_list
+  default: []
+  label: tags
+  description: Colocar as tags de assuntos relacionados a pergunta
+- name: bloco_de_resposta
+  type: blocks
+  label: Bloco de resposta
+  template_types: []
+  config:
+    min: 
+    max: 
+  description: Bloco de respota, como funcioan isso
