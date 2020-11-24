@@ -27,10 +27,10 @@ module.exports = {
    * ref：https://v1.vuepress.vuejs.org/theme/default-theme-config.html
    */
   themeConfig: {
-    repo: '',
+    repo: 'bolokoz/stahl3',
     editLinks: true,
     docsDir: '',
-    editLinkText: '',
+    editLinkText: 'edit on github',
     lastUpdated: true,
     nav: [
       {
