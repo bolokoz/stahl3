@@ -5,6 +5,11 @@ admin_path:
 webhook_url: 
 sections:
 - type: directory
+  path: docs/madeiras/exercicios
+  label: exercicios
+  create: documents
+  match: "**/*"
+- type: directory
   path: ''
   label: test section
   create: all
