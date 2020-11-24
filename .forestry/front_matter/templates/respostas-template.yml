@@ -1,4 +1,34 @@
 ---
 label: respostas template
 hide_body: false
-fields: []
+fields:
+- name: resposta_generica
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: Resposta generica
+  description: Colocar a resposta da pergunta de forma generica
+- name: argumentacao
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: Argumentacao
+  description: Colocar como chegar na resposta generica
+- name: calculo
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: true
+    schema:
+      format: markdown
+  label: calculo
+  description: colocar calculo
