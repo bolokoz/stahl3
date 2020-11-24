@@ -29,7 +29,7 @@ module.exports = {
   themeConfig: {
     repo: 'bolokoz/stahl3',
     editLinks: true,
-    docsDir: '',
+    docsDir: 'docs',
     editLinkText: 'edit on github',
     lastUpdated: true,
     nav: [
