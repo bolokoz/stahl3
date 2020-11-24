@@ -7,3 +7,5 @@ fields:
   config: {}
   template: exercicio-template
   label: exercicio
+pages:
+- docs/metalicas/metalicas003.md
