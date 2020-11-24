@@ -1,4 +1,9 @@
 ---
 label: exercicio
 hide_body: true
-fields: []
+fields:
+- name: exercicio
+  type: include
+  config: {}
+  template: exercicio-template
+  label: exercicio
