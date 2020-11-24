@@ -29,13 +29,11 @@ fields:
   default: []
   label: tags
   description: Colocar as tags de assuntos relacionados a pergunta
-- name: bloco_de_resposta
-  type: blocks
-  label: Bloco de resposta
-  template_types: []
-  config:
-    min: 
-    max: 
-  description: Bloco de respota, como funcioan isso
+- name: resposta
+  type: include
+  config: {}
+  template: respostas-template
+  label: resposta
+  description: bloco de resposta
 pages:
 - docs/madeiras/exercicios/mad002.md
