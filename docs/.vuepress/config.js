@@ -4,7 +4,7 @@ module.exports = {
   /**
    * Ref：https://v1.vuepress.vuejs.org/config/#title
    */
-  title: 'Stahlholz',
+  title: 'StahlHolz',
   /**
    * Ref：https://v1.vuepress.vuejs.org/config/#description
    */
@@ -30,7 +30,7 @@ module.exports = {
     repo: 'bolokoz/stahl3',
     editLinks: true,
     docsDir: 'docs',
-    editLinkText: 'edit on github',
+    editLinkText: 'achei um erro, sugerir correção',
     lastUpdated: true,
     nav: [
       {
@@ -55,6 +55,7 @@ module.exports = {
     '@vuepress/plugin-back-to-top',
     '@vuepress/plugin-medium-zoom',
     'beautiful-bar',
+    'vuepress-plugin-mermaidjs',
     [
       'vuepress-plugin-mathjax',
       {
