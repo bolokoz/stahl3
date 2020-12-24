@@ -30,7 +30,7 @@ module.exports = {
     repo: 'bolokoz/stahl3',
     editLinks: true,
     docsDir: 'docs',
-    editLinkText: 'achei um erro, sugerir correção',
+    editLinkText: 'Achei um erro',
     lastUpdated: true,
     nav: [
       {

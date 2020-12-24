@@ -1,3 +1,3 @@
-# Madeiras index
+# Madeiras
 
 Aqui eh o README MADEIRAS
