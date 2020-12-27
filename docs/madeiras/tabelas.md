@@ -40,20 +40,6 @@ Relações entre resistência para caracterização simplificada
 | C40     | 40  | 6  | 19500 | 750  | 950 |
 | C60     | 60  | 8  | 24500 | 800  | 1000 |
 
-### Resistência característica
-
-Normalmente adota-se 0.7, mas pode ser obtido através de ensaio de corpo de prova 
-
-$$f_{k} = 0.7f$$
-
-### Coeficiente de ponderação cargas permanentes
-
-| Coeficiente de ponderação  |     |
-|----------------------------|-----|
-| ELU Compressão \gamma_{wc} | 1.4 |
-| ELS Compressão \gamma_{wc} | 1   |
-| ELU Tração \gamma_{wt}     | 1.8 |
-| ELU Cortante \gamma_{wv}   | 1.8 |
 
 ## KMOD
 
@@ -94,27 +80,61 @@ Refere-se ao tipo de madeira
 
 $$F_d = \sum \gamma_g F_{gi,k} + \gamma_Q [ F_{Qi,k} + \sum \Psi_{0j} F_{Qj,k}]$$
 
-Em suma, força combinada = (soma das cargas permanentes vezes coeficiente de ponderação permanente) + (coeficiente ponderação cargas variáveis vezes força variável somado às cargas de curta duração com coeficiente de ponderação de curta duração )  
+### Combinação com duas cargas acidentais de naturezas diferentes
 
+Verificar dois casos:
+
+O primeiro caso com efeitos dinâmicos como ação variável principal
+
+$$F_d = \sum \gamma_g F_{gi,k} + \gamma_Q [ Q_{k} + \Psi_{0j} W_{k}]$$
+
+
+O segundo caso com vento como ação variável principal:
+
+$$F_d = \sum \gamma_g G_{i,k} + \gamma_Q [ 0.75 W_{k} + \Psi_{0Q} Q_{k}]$$
+
+>- $\gamma_g$ fator de ponderação para ações permanentes 
+>- $\gamma_Q$ fator de ponderação para ação variável principal
+>- $W_Q$ ação variável do vento (wind)
 >- $\Psi_0$ para ações variáveis de média duração (1 semana a 6 meses)
 >- $\Psi_1$ para ações variáveis de média duração (1 semana a 6 meses)
 >- $\Psi_2$ para ações variáveis de longa duração (> 6 meses)
 
-### Ações correntes
+### Resistência característica
+
+Normalmente adota-se 0.7, mas pode ser obtido através de ensaio de corpo de prova 
+
+$$f_{k} = 0.7f$$
+
+
+
+### Fator de ponderação carga variável principal
+
+| Combinações variáveis          | Ações variáveis ou acidentais $\gamma_Q$ | Efeitos temperatudra $\gamma_\epsilon$        |
+|--------------------------------------------|--------------|-----------------|
+| Normais  | 1.4          | 1.2               |
+| Especiais ou construção           | 1.2          | 1               |
+| Excepcionais           | 1          | 0               |
+
+
+### Fator de ponderação carga variável secundária
+#### Ações correntes
 
 | Ações                    | $\Psi_0$ | $\Psi_1$  | $\Psi_2$  |
 |--------------------------|------------|-----|-----|
 | Variação de temperatura  | 0.6        | 0.5 | 0.3 |
 | Pressão dinâmica vento   | 0.5        | 0.2 | 0   |
 
-### Acidentais
+#### Cargas Acidentais
 
 | Ações                    | $\Psi_0$ | $\Psi_1$  | $\Psi_2$  |
 |--------------------------|------------|-----|-----|
-| Variação de temperatura  | 0.6        | 0.5 | 0.3 |
-| Pressão dinâmica vento   | 0.5        | 0.2 | 0   |
+| Locais sem predominância de pesos ou concentrações de pessoas  | 0.4        | 0.3 | 0.2 |
+| Locais com predominância de pesos fixos ou pessoas  | 0.7        | 0.6 | 0.4 |
+| Bibliotecas, arquivos, oficinas e garagens  | 0.8        | 0.7 | 0.6 |
 
-### Cargas Móveis
+
+#### Cargas Móveis
 
 | Ações                    | $\Psi_0$| $\Psi_1$  | $\Psi_2$  |
 |--------------------------|------------|-----|-----|
@@ -122,13 +142,6 @@ Em suma, força combinada = (soma das cargas permanentes vezes coeficiente de po
 | Pontes rodoviárias   | 0.6        | 0.4 | 0.2   |
 | Pontes ferroviárias   | 0.8        | 0.6 | 0.4   |
 
-### Fatores de ponderação para cargas variáveis
-
-| Combinações variáveis          | Ações variáveis ou acidentais $\gamma_Q$ | Efeitos temperatudra $\gamma_\epsilon$        |
-|--------------------------------------------|--------------|-----------------|
-| Normais  | 1.4          | 1.2               |
-| Especiais ou construção           | 1.2          | 1               |
-| Excepcionais           | 1          | 0               |
 
 
 <script>

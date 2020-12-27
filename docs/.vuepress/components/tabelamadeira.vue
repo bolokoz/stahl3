@@ -30,7 +30,7 @@
           {
             text: 'Nome',
             align: 'start',
-            sortable: false,
+
             value: 'Nome',
           },
           { text: 'ρap(kg/m3)', value: 'ρap(kg/m3)' },
