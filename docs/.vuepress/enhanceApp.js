@@ -7,5 +7,4 @@ export default ({
   siteData // site metadata
 }) => {
   Vue.use(Vuetify);
-  options.vuetify = new Vuetify({})
 };

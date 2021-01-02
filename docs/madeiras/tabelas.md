@@ -100,15 +100,44 @@ $$F_d = \sum \gamma_g G_{i,k} + \gamma_Q [ 0.75 W_{k} + \Psi_{0Q} Q_{k}]$$
 >- $\Psi_1$ para ações variáveis de média duração (1 semana a 6 meses)
 >- $\Psi_2$ para ações variáveis de longa duração (> 6 meses)
 
-### Resistência característica
+### Coeficientes minoração ELU
+
+$$\gamma_{wc} = 1.4$$
+$$\gamma_{wt} = 1.8$$
+$$\gamma_{wv} = 1.8$$
+
+### Coeficiente minoração ELS
+
+$$\gamma_{w} = 1$$
+
+### Resistência caracteristica
 
 Normalmente adota-se 0.7, mas pode ser obtido através de ensaio de corpo de prova 
 
 $$f_{k} = 0.7f$$
 
+### Coeficiente para ação permamente ($\gamma_g$)
+
+#### Pequena variabilidade
+
+| Combinações         | Desfavorável | Favorável        |
+|--------------------------------------------|--------------|-----------------|
+| Normais                 | 1.3          | 1               |
+| Especiais ou construção | 1.2          | 1               |
+| Excepcionais            | 1.1        | 1               |
+
+#### Grande variabilidade
+
+| Combinações         | Desfavorável | Favorável        |
+|--------------------------------------------|--------------|-----------------|
+| Normais                 | 1.4          | 0.9               |
+| Especiais ou construção | 1.3          | 0.9               |
+| Excepcionais            | 1.2        | 0.9               |
 
 
-### Fator de ponderação carga variável principal
+
+
+### Coeficiente carga variável principal ($\gamma_q$)
 
 | Combinações variáveis          | Ações variáveis ou acidentais $\gamma_Q$ | Efeitos temperatudra $\gamma_\epsilon$        |
 |--------------------------------------------|--------------|-----------------|
