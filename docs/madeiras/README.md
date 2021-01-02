@@ -1,5 +1,9 @@
 # Madeiras
 
+## Normas relevantes
+
+- NBR 7190:97 - Projeto de estruturas de madeira
+
 ## Flexão simples
 
 :::warning cuidado
