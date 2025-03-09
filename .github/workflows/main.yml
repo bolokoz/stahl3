@@ -1,15 +1,49 @@
-language: node_js
-node_js:
-  - lts/*
-install:
-  - yarn install # npm ci
-script:
-  - yarn docs:build # npm run docs:build
-deploy:
-  provider: pages
-  skip_cleanup: true
-  local_dir: docs/.vuepress/dist
-  github_token: $GITHUB_TOKEN # A token generated on GitHub allowing Travis to push code on you repository. Set in the Travis settings page of your repository, as a secure variable
-  keep_history: true
-  on:
-    branch: master
+name: docs
+
+on:
+  # trigger deployment on every push to main branch
+  push:
+    branches: [main]
+  # trigger deployment manually
+  workflow_dispatch:
+
+jobs:
+  docs:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          # fetch all commits to get last updated time or other git log info
+          fetch-depth: 0
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          # choose node.js version to use
+          node-version: 22
+          # cache deps for pnpm
+          cache: pnpm
+
+      - name: Install deps
+        run: pnpm install --frozen-lockfile
+
+      # run build script
+      - name: Build VuePress site
+        run: pnpm docs:build
+
+      # please check out the docs of the workflow for more details
+      # @see https://github.com/crazy-max/ghaction-github-pages
+      - name: Deploy to GitHub Pages
+        uses: crazy-max/ghaction-github-pages@v4
+        with:
+          # deploy to gh-pages branch
+          target_branch: gh-pages
+          # deploy the default output dir of VuePress
+          build_dir: docs/.vuepress/dist
+        env:
+          # @see https://docs.github.com/en/actions/reference/authentication-in-a-workflow#about-the-github_token-secret
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
